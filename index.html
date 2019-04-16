@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.">
   <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
@@ -11,8 +12,9 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
+      padding: 10% 0;
       font-size: 11px;
-      text-align: center;
+      width: 100%;
     }
 
     .attribution a {
@@ -22,10 +24,9 @@
 </head>
 
 <body>
-
   <div class="page">
     <header class="header">
-      <div class="header__logo">
+      <div tabindex="0" class="header__logo" aria-label="huddle logo">
         <img src="./images/logo.svg" alt="huddle logo">
       </div>
       <div class="header__btn">
@@ -36,10 +37,10 @@
     </header>
     <main id="main">
       <section class="hero">
-        <h1>
+        <h1 tabindex="0">
           Build The Community Your Fans Will Love
         </h1>
-        <p class="hero__intro">
+        <p class="hero__intro" tabindex="0">
           Huddle re-imagines the way we build communities. You have a voice, but so does
           your audience. Create connections with your users as you engage in genuine discussion.
         </p>
@@ -49,13 +50,13 @@
           </a>
         </div>
         <div class="hero__img">
-          <img src="images/screen-mockups.svg" alt="screen mockups">
+          <img src="images/screen-mockups.svg" alt="screen mockups" aria-hidden="true">
         </div>
 
-        <div class="hero__stats">
+        <div class="hero__stats" tabindex="0">
           <div class="hero__stat">
             <div class="hero__stat__icon icon icon-community"></div>
-            <div class="hero__stat__numbers">
+            <div class="hero__stat__numbers" aria-label="more than 1.4 thousand">
               1.4k+
             </div>
             <div class="hero__stat__heading">
@@ -64,7 +65,7 @@
           </div>
           <div class="hero__stat">
             <div class="hero__stat__icon icon icon-messages"></div>
-            <div class="hero__stat__numbers">
+            <div class="hero__stat__numbers" aria-label="more than 2.7 million">
               2.7m+
             </div>
             <div class="hero__stat__heading">
@@ -75,16 +76,12 @@
 
       </section>
 
-      <div class="bg bg--top"><img
-          srcset="./images/bg-section-top-mobile-1.svg 375w, ./images/bg-section-top-desktop-1.svg 376w"
-          sizes="(max-width: 375px) 375px, 376px" src="./images/bg-section-top-desktop-1.svg" alt="background decorator"
-          aria-disabled="true"></div>
-      <section class="section section--bg">
+      <section class="section section--bg bg-top">
         <div class="wrapper">
           <div class="section__img col-half order-2"><img src="./images/illustration-grow-together.svg"
-              alt="illustration grow together">
+              alt="illustration grow together" aria-hidden="true">
           </div>
-          <div class="section__content col-half order-1">
+          <div class="section__content col-half order-1" tabindex="0">
             <h2>
               Grow Together
             </h2>
@@ -95,18 +92,14 @@
           </div>
         </div>
       </section>
-      <div class="bg bg--bottom">
-        <img srcset="./images/bg-section-bottom-mobile-1.svg 375w, ./images/bg-section-bottom-desktop-1.svg 376w"
-          sizes="(max-width: 375px) 375px, 376px" src="./images/bg-section-bottom-desktop-1.svg"
-          alt="background decorator" aria-disabled="true">
-      </div>
 
       <section class="section">
         <div class="wrapper">
           <div class="section__img">
-            <img src="./images/illustration-flowing-conversation.svg" alt="illustration conversation">
+            <img src="./images/illustration-flowing-conversation.svg" alt="illustration conversation"
+              aria-hidden="true">
           </div>
-          <div class="section__content">
+          <div class="section__content" tabindex="0">
             <h2>
               Flowing Conversations
             </h2>
@@ -118,16 +111,11 @@
         </div>
       </section>
 
-      <div class="bg bg--top">
-        <img srcset="./images/bg-section-top-mobile-2.svg 375w, ./images/bg-section-top-desktop-2.svg 376w"
-          sizes="(max-width: 375px) 375px, 376px" src="./images/bg-section-top-desktop-2.svg" alt="background decorator"
-          aria-disabled="true">
-      </div>
-      <section class="section section--bg">
+      <section class="section section--bg bg-bottom">
         <div class="wrapper">
           <div class="section__img order-2"><img src="./images/illustration-your-users.svg" alt="illustration users">
           </div>
-          <div class="section__content order-1">
+          <div class="section__content order-1" tabindex="0">
             <h2>
               Your Users
             </h2>
@@ -138,16 +126,11 @@
           </div>
         </div>
       </section>
-      <div class="bg bg--bottom">
-        <img srcset="./images/bg-section-bottom-mobile-2.svg 375w, ./images/bg-section-bottom-desktop-2.svg 376w"
-          sizes="(max-width: 375px) 375px, 376px" src="./images/bg-section-bottom-desktop-2.svg"
-          alt="background decorator" aria-disabled="true">
-      </div>
 
       <section class="section">
         <div class="wrapper">
           <div class="hero hero--island">
-            <h2>
+            <h2 tabindex="0">
               Ready To Build Your Community?
             </h2>
 
@@ -160,14 +143,9 @@
         </div>
       </section>
 
-      <div class="bg bg--top">
-        <img srcset="./images/bg-footer-top-mobile.svg 375w, ./images/bg-footer-top-desktop.svg 376w"
-          sizes="(max-width: 375px) 375px, 376px" src="./images/bg-footer-top-desktop.svg" alt="background decorator"
-          aria-disabled="true">
-      </div>
       <footer class="footer">
         <div class="wrapper">
-          <div class="footer__contact order-2">
+          <div class="footer__contact order-2" tabindex="0">
             <h3>
               Newsletter
             </h3>
@@ -177,10 +155,14 @@
             </p>
             <form action="" class="form">
               <label for="" aria-label="enter email">
-                <input type="email" name="" id="" required>
+                <input type="email" name="" id="" aria-required="true" required>
               </label>
-              <input type="submit" value="Subscribe" class="btn btn--form">
+              <input type="submit" value="Subscribe" class="btn btn--form" aria-label="subscribe">
             </form>
+            <p class="attribution">
+              Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+              Coded by <a href="https://www.github.com/thecalicoder" target="_blank">thecalicoder</a>.
+            </p>
           </div>
           <div class="footer__contact order-1">
             <div class="footer__logo">
@@ -193,23 +175,25 @@
               vestibulum a, ultrices quis sem.
             </p>
             <address>
-              <p>
-                <i class="icon icon-phone"></i> <span>Phone: +1-543-123-4567</span>
+              <p tabindex="0" aria-label="phone number">
+                <i class="icon icon-phone"></i> <a href="tel:" aria-label="1. 5 4 3. 1 2 3. 4 5 6 7">
+                  Phone: +1-543-123-4567
+                </a>
               </p>
               <p>
                 <i class="icon icon-email"></i> <span><a href="mailto:example@huddle.com">example@huddle.com</a></span>
               </p>
             </address>
             <ul class="footer__social">
-              <li><a href="http://" target="_blank" rel="noopener noreferrer">
+              <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="facebook">
                   <svg class="icon icon-facebook">
                     <use xlink:href="#icon-facebook"></use>
                   </svg></a></li>
-              <li><a href="http://" target="_blank" rel="noopener noreferrer">
+              <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="instagram">
                   <svg class="icon icon-instagram">
                     <use xlink:href="#icon-instagram"></use>
                   </svg></a></li>
-              <li><a href="http://" target="_blank" rel="noopener noreferrer">
+              <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="twitter">
                   <svg class="icon icon-twitter">
                     <use xlink:href="#icon-twitter"></use>
                   </svg></a></li>
@@ -254,13 +238,6 @@
       </symbol>
     </defs>
   </svg>
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.github.com/thecalicoder" target="_blank">thecalicoder</a>.
-    </p>
-  </footer>
   <script src="js/webfontloader.js"></script>
   <script>
     WebFont.load({

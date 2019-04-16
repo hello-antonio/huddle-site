@@ -267,8 +267,10 @@ a:hover {
 }
 
 /* SECTION */
+
 .section--bg {
     background-color: #F6FBFF;
+    margin: 15% 0;
 }
 
 .section__img {
@@ -281,35 +283,116 @@ a:hover {
 }
 
 /* BACKGROUNDS */
-.bg {
-    width: 100%;
-    height: 100%;
-    margin: 0 0 -6px 0;
+.bg-top,
+.bg-bottom {
     position: relative;
-    z-index: 1000;
     backface-visibility: hidden;
 }
 
-.bg--top {
-    margin: 0 0 -6px 0;
+.bg-top::before,
+.bg-bottom::before {
+    z-index: -1;
 }
 
-.bg--bottom {
-    margin: 0;
+.bg-top::before,
+.bg-top::after,
+.bg-bottom::before,
+.bg-bottom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+}
+
+.bg-top::before {
+    background: url(../images/bg-section-top-desktop-1.svg) no-repeat top center;
+    background-size: cover;
+    height: 165px;
+}
+
+.bg-top::after {
+    background: url(../images/bg-section-bottom-desktop-1.svg) no-repeat bottom center;
+    height: 139px;
+    top: 96%;
+    background-size: cover;
+}
+
+.bg-bottom::before {
+    background: url(../images/bg-section-top-desktop-2.svg) no-repeat top center;
+    height: 156px;
+    background-size: cover;
+}
+
+.bg-bottom::after {
+    background: url(../images/bg-section-bottom-desktop-2.svg) no-repeat bottom center;
+    height: 139px;
+    top: 96%;
+    background-size: cover;
+}
+
+@media screen and (max-width: 375px) {
+    .bg-top::before {
+        background: url(../images/bg-section-top-mobile-1.svg) no-repeat top center;
+        background-size: cover;
+        height: 112px;
+    }
+
+    .bg-top::after {
+        background: url(../images/bg-section-bottom-mobile-1.svg) no-repeat bottom center;
+        height: 52px;
+        top: 96%;
+        background-size: cover;
+    }
+
+    .bg-bottom::before {
+        background: url(../images/bg-section-top-mobile-2.svg) no-repeat top center;
+        height: 103px;
+        background-size: cover;
+    }
+
+    .bg-bottom::after {
+        background: url(../images/bg-section-bottom-mobile-2.svg) no-repeat bottom center;
+        height: 101px;
+        top: 96%;
+        background-size: cover;
+    }
 }
 
 /* FOOTER */
 
 .footer {
+    margin: 10% 0 0;
     background-color: hsl(192, 100%, 9%);
     color: #fff;
     width: 100%;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 99%;
+    width: 100%;
+    background: url(../images/bg-footer-top-desktop.svg) no-repeat top center;
+    height: 153px;
+    background-size: cover;
+    z-index: -1;
+}
+
+@media screen and (max-width:375px) {
+    .footer::before {
+        background: url(../images/bg-footer-top-mobile.svg) no-repeat top center;
+        height: 52px;
+        background-size: cover;
+    }
 }
 
 .footer .wrapper {
     -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
 }
 
 .footer__contact {
@@ -571,7 +654,6 @@ a:hover {
     }
 
     .hero--island {
-        margin: 10rem auto;
         padding: 10rem 2rem;
     }
 
