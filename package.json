@@ -1,0 +1,35 @@
+{
+  "name": "huddle-landing-page-with-curved-sections-master",
+  "version": "1.0.0",
+  "description": "![Header/intro section for the Huddle landing page with curved sections](./desktop-preview.jpg)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "prebuild": "rm -rf docs/*",
+    "start": "parcel serve src/index.html --open --out-dir docs",
+    "build": "parcel build src/index.html --out-dir docs --public-url ./",
+    "watch": "parcel watch --out-dir docs src/index.html --no-cache",
+    "deploy": "npm run build && git add . && git commit -a -m 'latest build' && git push origin master"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.9",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1",
+    "sass": "^1.17.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecalicoder/huddle-landing-page-with-curved-sections.git"
+  },
+  "author": "Giovanni De Andre <hello.giolara@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thecalicoder/huddle-landing-page-with-curved-sections/issues"
+  },
+  "homepage": "https://github.com/thecalicoder/huddle-landing-page-with-curved-sections#readme",
+  "dependencies": {
+    "parcel": "^1.12.3"
+  }
+}

@@ -4,11 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.">
+  <meta name="description"
+    content="re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.">
   <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:700&display=swap" rel="preload"
+    as="style" onload="this.rel = 'stylesheet'">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:700&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
@@ -50,7 +56,7 @@
           </a>
         </div>
         <div class="hero__img">
-          <img src="images/screen-mockups.svg" alt="screen mockups" aria-hidden="true">
+          <img src="./images/screen-mockups.svg" alt="screen mockups" aria-hidden="true">
         </div>
 
         <div class="hero__stats" tabindex="0">
@@ -96,8 +102,8 @@
       <section class="section">
         <div class="wrapper">
           <div class="section__img">
-            <img src="./images/illustration-flowing-conversation.svg" alt="illustration conversation"
-              aria-hidden="true">
+            <img src="./images/illustration-flowing-conversation.svg" alt="illustration conversation" aria-hidden="true"
+              loading="lazy">
           </div>
           <div class="section__content" tabindex="0">
             <h2>
@@ -113,7 +119,8 @@
 
       <section class="section section--bg bg-bottom">
         <div class="wrapper">
-          <div class="section__img order-2"><img src="./images/illustration-your-users.svg" alt="illustration users">
+          <div class="section__img order-2"><img src="./images/illustration-your-users.svg" alt="illustration users"
+              loading="lazy">
           </div>
           <div class="section__content order-1" tabindex="0">
             <h2>
@@ -159,15 +166,11 @@
               </label>
               <input type="submit" value="Subscribe" class="btn btn--form" aria-label="subscribe">
             </form>
-            <p class="attribution">
-              Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-              Coded by <a href="https://www.github.com/thecalicoder" target="_blank">thecalicoder</a>.
-            </p>
           </div>
           <div class="footer__contact order-1">
             <div class="footer__logo">
-              <svg>
-                <use xlink:href="#icon-logo"></use>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#icon-logo" href="#icon-logo"></use>
               </svg>
             </div>
             <p>
@@ -185,20 +188,35 @@
               </p>
             </address>
             <ul class="footer__social">
-              <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="facebook">
-                  <svg class="icon icon-facebook">
-                    <use xlink:href="#icon-facebook"></use>
-                  </svg></a></li>
-              <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="instagram">
-                  <svg class="icon icon-instagram">
-                    <use xlink:href="#icon-instagram"></use>
-                  </svg></a></li>
-              <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="twitter">
-                  <svg class="icon icon-twitter">
-                    <use xlink:href="#icon-twitter"></use>
-                  </svg></a></li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+                    <svg class="icon icon-facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="#icon-facebook" href="#icon-facebook"></use>
+                    </svg>
+                </a>
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="instagram">
+                  <svg class="icon icon-instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="#icon-instagram" href="#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="twitter">
+                  <svg class="icon icon-twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="#icon-twitter" href="#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
             </ul>
           </div>
+        </div>
+        <div class="wrapper">
+            <p class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="https://www.github.com/thecalicoder" target="_blank">thecalicoder</a>.
+              </p>
         </div>
       </footer>
 
@@ -238,14 +256,6 @@
       </symbol>
     </defs>
   </svg>
-  <script src="js/webfontloader.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ['Poppins:700', 'Open Sans:400,600,700']
-      }
-    });
-  </script>
 </body>
 
 </html>
